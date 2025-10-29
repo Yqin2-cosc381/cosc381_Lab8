@@ -10,7 +10,8 @@ adventure_theme = Theme({
     "right_choice": "yellow",
     "exit_choice": "red",
     "left": "green",
-    "right": "blue"
+    "right": "blue",
+    "bye":"purple"
 })
 
 def step(choice: str, events):
@@ -38,6 +39,7 @@ if __name__ == "__main__":
 
         choice = choice.strip().lower()
         if choice == 'exit':
+            console.print("[bye]goodbye, see you again[/bye]")
             break
         
         console.print(step(choice, events))
